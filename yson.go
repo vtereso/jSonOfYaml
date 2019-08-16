@@ -23,6 +23,9 @@ func main() {
 		return
 	}
 	yamlFile := os.Args[0]
+	if yamlFile == "-" {
+		yamlFile = "/dev/stdin"
+	}
 	yamlBytes, err := ioutil.ReadFile(yamlFile)
 	if err != nil {
 		fmt.Println(err)
