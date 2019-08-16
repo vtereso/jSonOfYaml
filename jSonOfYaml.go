@@ -19,15 +19,18 @@ func main() {
 	yamlBytes, err := ioutil.ReadFile(file)
 	if err != nil {
 		fmt.Println("Error reading file:", err)
+		return
 	}
 	jsonBytes, err := yaml.YAMLToJSON(yamlBytes)
 	if err != nil {
 		fmt.Println("Error converting yaml to json:", err)
+		return
 	}
 	var out bytes.Buffer
 	json.Indent(&out, jsonBytes, "", "	")
 	if err != nil {
 		fmt.Println("Error indenting json:", err)
+		return
 	}
 	fmt.Println(out.String())
 }
