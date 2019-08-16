@@ -1,5 +1,5 @@
 # yson
-`yson` is a utility wrapper around `"github.com/ghodss/yaml"` to easily convert yaml files into json. By default, `yson` prints to stdout.
+`yson` is a utility wrapper around [`github.com/ghodss/yaml`](https://github.com/ghodss/yaml) to easily convert yaml files into json. By default, `yson` prints to stdout.
 
 ```
 yson <INPUT_FILE> [-o <OUTPUT_FILE>]
